@@ -34,8 +34,6 @@ namespace L2TStreamParser.Test
                 }
             });
 
-            var count = 0;
-
             var streamParser = (from strm in twCtx.Streaming where strm.Type == StreamingType.Filter && strm.Track == "test" select strm).CreateParser();
             streamParser.ReceivedResult +=
                 (_sender, _args) =>
